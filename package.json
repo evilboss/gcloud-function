@@ -1,27 +1,32 @@
 {
-   "name": "google-cloud-function",
-   "version": "1.0.0",
-   "description": "",
-   "main": "index.js",
-   "scripts": {
-      "dev": "nodemon --exec babel-node src/dev.js",
-      "build": "babel src --out-dir dist",
-      "prestart": "npm run build",
-      "start": "node dist/index.js",
-      "test": "./node_modules/.bin/jest",
-      "deploy": "npm run build && cd dist && gcloud alpha functions deploy activeCampaignService --bucket myBucket --trigger-http"
-   },
-   "keywords": [],
-   "author": "Jr Reyes <jr.evilboss@gmail.com>",
-   "license": "ISC",
-   "devDependencies": {
-      "babel-cli": "^6.10.1",
-      "babel-core": "^6.26.3",
-      "babel-jest": "^22.4.3",
-      "babel-loader": "^6.2.4",
-      "babel-preset-es2015": "^6.9.0",
-      "jest": "^22.4.3",
-      "nodemon": "^1.9.2",
-      "regenerator-runtime": "^0.11.1"
-   }
+  "name": "google-cloud-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/dev.js",
+    "build": "babel src --out-dir dist",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "test": "./node_modules/.bin/jest",
+    "deploy": "npm run build && cd dist && gcloud alpha functions deploy activeCampaignService --bucket myBucket --trigger-http"
+  },
+  "keywords": [],
+  "author": "Jr Reyes <jr.evilboss@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "jest": "^22.4.3",
+    "nodemon": "^1.9.2",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "faker": "^4.1.0",
+    "query-string": "^6.1.0"
+  }
 }

@@ -1,11 +1,11 @@
 import http from 'http';
-import * as util from './util.js';
+import * as util from './util';
 
 // [START helloHttp]
 function handleGET(req, res) {
     // Do something with the GET request
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end(util.getHello() + ' Long');
+    res.end(util.getHello() + ' Jr');
 }
 
 function handlePUT(req, res) {
