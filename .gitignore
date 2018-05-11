@@ -1,0 +1,12 @@
+
+# build and dependencies
+node_modules/
+dist/
+
+# tmp files
+*~
+*#
+.DS_STORE
+*.log
+.idea/
+yarn.lock
