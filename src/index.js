@@ -15,7 +15,8 @@ function handlePUT(req, res) {
 }
 
 function handlePOST(req, res) {
-
+    res.writeHead(403, {'Content-Type': 'text/plain'});
+    res.end('posting something');
 }
 
 /**
@@ -34,6 +35,9 @@ export function activeCampaignService(req, res) {
             break;
         case 'PUT':
             handlePUT(req, res);
+            break;
+        case 'POST':
+            handlePOST(req, res);
             break;
         default:
             res.writeHead(500, {'Content-Type': 'application/javascript'});
